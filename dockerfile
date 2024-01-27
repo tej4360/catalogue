@@ -4,5 +4,6 @@ WORKDIR     /app
 COPY        server.js .
 COPY        package.json ./
 RUN         npm install
-COPY        node_modules node_modules
+# Copy the rest of the application code
+COPY        . .
 ENTRYPOINT  [ "node", "server.js" ]
