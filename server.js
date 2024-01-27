@@ -132,11 +132,7 @@ if (process.env.MONGO == 'true') {
 // set up Mongo
 function mongoConnect() {
     return new Promise((resolve, reject) => {
-      // Set up Mongo connection details
-        var mongoServiceName = mongo-service || 'mongodb'; // Replace with your actual MongoDB service name
-        var mongoPort = 80 || 27017;
-        var mongoDBName = mongo || 'catalogue';
-        var mongoURL = 'mongodb://mongodb:27017/catalogue';
+        var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/catalogue';
         mongoClient.connect(mongoURL, (error, client) => {
             if(error) {
                 reject(error);
