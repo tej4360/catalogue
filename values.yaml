@@ -1,0 +1,13 @@
+# Default values for roboshop.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+component: catalogue
+version1: 2
+version2: 2
+containerport: 80
+svcport: 8089
+target: 80
+service: ClusterIP
+nodeport: false
