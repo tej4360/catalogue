@@ -128,11 +128,10 @@ app.get('/search/:text', (req, res) => {
     }
 });
 
-if (process.env.MONGO == 'true') {
 // set up Mongo
 function mongoConnect() {
     return new Promise((resolve, reject) => {
-        var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/catalogue';
+        var mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/catalogue';
         mongoClient.connect(mongoURL, (error, client) => {
             if(error) {
                 reject(error);
@@ -144,7 +143,7 @@ function mongoConnect() {
         });
     });
 }
-}
+
 
 if (process.env.DOCUMENTDB == 'true') {
 function mongoConnect() {
