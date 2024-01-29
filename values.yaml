@@ -4,8 +4,7 @@
 
 replicaCount: 1
 component: catalogue
-version1: 2
-version2: 2
+image: catalogue:2.7
 containerport: 80
 svcport: 8089
 target: 80
