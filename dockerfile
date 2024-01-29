@@ -15,8 +15,6 @@ COPY package.json ./
 RUN npm install
 RUN npm install mongodb@2.2.33
 
-# Copy MongoDB repo file if schema_setup is "mongo"
-COPY mongo.repo /etc/apt/sources.list.d/mongo.list
 RUN apt-get update && apt-get install -y mongodb-org-shell \
 
 # Download DocDB PEM File
