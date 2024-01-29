@@ -20,7 +20,7 @@ COPY mongo.repo /etc/apt/sources.list.d/mongo.list
 RUN apt-get update && apt-get install -y mongodb-org-shell \
 
 # Download DocDB PEM File
-RUN curl -o /app/rds-combined-ca-bundle.pem https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem
+ADD https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem /app/rds-combined-ca-bundle.pem
 
 # Execute the MongoDB
 RUN echo "mongo" > /app/load-schema.sh \
