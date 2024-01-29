@@ -17,12 +17,12 @@ RUN npm install mongodb@2.2.33
 
 # Copy MongoDB repo file if schema_setup is "mongo"
 COPY mongo.repo /etc/yum.repos.d/mongo.repo
-RUN apt-get update && apt-get install -y mongodb-org-shell; \
+RUN apt-get update && apt-get install -y mongodb-org-shell \
 
 # Download DocDB PEM File
 RUN curl -o /app/rds-combined-ca-bundle.pem https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem
 
-# Execute the MongoDB shell if schema_setup is "mongo"
+# Execute the MongoDB
 RUN echo "mongo" > /app/load-schema.sh \
     && chmod +x /app/load-schema.sh
 
