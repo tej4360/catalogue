@@ -18,7 +18,7 @@ RUN npm install mongodb@2.2.33
 RUN apt-get update && apt-get install -y mongodb-org-shell \
 
 # Download DocDB PEM File
-ADD https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem /app/rds-combined-ca-bundle.pem
+#ADD https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem /app/rds-combined-ca-bundle.pem
 
 # Execute the MongoDB
 RUN echo "mongo" > /app/load-schema.sh \
