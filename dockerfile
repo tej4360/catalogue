@@ -14,8 +14,10 @@ RUN         npm install
 # Copy the MongoDB schema initialization script
 COPY        init-mongo.sh /app/
 
-# Grant execution permission to the script
-RUN         chmod +x /app/init-mongo.sh
+# Install the MongoDB client tools
+RUN         apt-get update && \
+            apt-get install -y mongodb-clients && \
+            chmod +x /app/init-mongo.sh
 
 # Run the MongoDB schema initialization script during the build
 RUN         ./init-mongo.sh
