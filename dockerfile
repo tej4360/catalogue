@@ -6,6 +6,6 @@ COPY        package.json ./
 # Set environment variable for MONGO
 ENV         MONGO true
 RUN         npm install
-RUN         npm install mongodb@2.2.33
+#RUN         npm install mongodb@2.2.33
 COPY        schema/catalogue.js /usr/src/app/schema/
 ENTRYPOINT  [ "node", "server.js" ]
