@@ -3,6 +3,8 @@ RUN         mkdir /app
 WORKDIR     /app
 COPY        server.js .
 COPY        package.json ./
+#new
+COPY        schema/catalogue.js ./
 # Set environment variable for MONGO
 ENV         MONGO true
 RUN         npm install
