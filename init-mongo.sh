@@ -1,2 +1,2 @@
 #!/bin/bash
-mongo --host mongo-service < schema/catalogue.js
+mongo --host mongo-service < /app/schema/catalogue.js
