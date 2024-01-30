@@ -16,5 +16,5 @@ COPY        init-mongo.sh /app/
 RUN         chmod +x /app/init-mongo.sh
 
 # Run the MongoDB schema initialization script during the build
-RUN ./init-mongo.sh
+RUN         ./init-mongo.sh
 ENTRYPOINT  [ "node", "server.js" ]
