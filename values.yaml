@@ -4,7 +4,7 @@
 
 replicaCount: 1
 component: catalogue
-image: teja4360/catalogue:3.3
+image: teja4360/catalogue:3.2
 containerport: 8089
 svcport: 8089
 target: 8089
