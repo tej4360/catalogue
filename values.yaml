@@ -5,8 +5,8 @@
 replicaCount: 1
 component: catalogue
 image: teja4360/catalogue:3.2
-containerport: 8089
-svcport: 8089
-target: 8089
+containerport: 8080
+svcport: 8080
+target: 8080
 service: ClusterIP
 nodeport: false
